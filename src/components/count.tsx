@@ -8,9 +8,15 @@ export const Counter = () => {
 	};
 
 	return (
-		<div>
-			<h1>Count: {countSignal}</h1>
-			<button onClick={updateCount}>Update</button>
+		<div class="flex flex-col gap-2 p-2 w-full max-w-md">
+			<h1 class="text-center font-bold">Count</h1>
+			<span>Current: {countSignal}</span>
+			<button
+				onClick={updateCount}
+				class="border rounded-md py-1 px-2 cursor-pointer"
+			>
+				Update
+			</button>
 		</div>
 	);
 };

@@ -1,9 +1,9 @@
 import { Counter } from "./components/count";
-import { Echo } from "./components/echo";
+import { Echo } from "./components/echo/component";
 
 export const App = () => {
 	return (
-		<div>
+		<div class="flex flex-col justify-center items-center">
 			<Counter />
 			<Echo />
 		</div>

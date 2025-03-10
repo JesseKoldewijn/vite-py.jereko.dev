@@ -8,12 +8,11 @@ def index_endpoint():
         "status": "success"
     }
 
-    response = app.response_class(
+    return app.response_class(
         response=json.dumps(responseObject),
         status=200,
         mimetype='application/json'
     )
-    return response
 
 @app.route("/api/echo", methods=["POST"])
 def echo_endpoint():
@@ -24,9 +23,8 @@ def echo_endpoint():
         "status": "success"
     }
 
-    response = app.response_class(
+    return app.response_class(
         response=json.dumps(responseObject),
         status=200,
         mimetype='application/json'
     )
-    return response

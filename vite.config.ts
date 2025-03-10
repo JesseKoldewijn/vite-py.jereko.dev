@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import preact from "@preact/preset-vite";
+import tailwind from "@tailwindcss/vite";
 
 const apiTarget =
 	process.env.NODE_ENV === "development"
@@ -8,7 +9,7 @@ const apiTarget =
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [preact()],
+	plugins: [preact(), tailwind()],
 	server: {
 		proxy: {
 			"/api": {
