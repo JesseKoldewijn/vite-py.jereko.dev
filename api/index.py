@@ -20,7 +20,7 @@ def echo_endpoint():
     data = request.get_json()
 
     responseObject = {
-        "body": json.dumps(data),
+        "body": data,
         "status": "success"
     }
 
