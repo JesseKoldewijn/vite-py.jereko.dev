@@ -1,4 +1,4 @@
-import { Counter } from "./components/count";
+import { Counter } from "./components/count/component";
 import { Echo } from "./components/echo/component";
 
 export const App = () => {

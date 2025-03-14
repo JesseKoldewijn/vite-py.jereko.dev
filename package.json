@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "concurrently \"$npm_execpath run vite-dev\" \"$npm_execpath run flask-dev\"",
-		"flask-run": "FLASK_DEBUG=1 pip3 install -r requirements.txt && python -m flask --app api/index run -p 5328",
+		"flask-run": "FLASK_DEBUG=1 .venv/bin/pip install -r requirements.txt && .venv/bin/python -m flask --app api/index run -p 5328",
 		"flask-dev": "onchange -i -k \"api/**/*.*\" -- $npm_execpath run flask-run",
 		"vite-dev": "vite dev",
 		"build": "tsc -b && vite build",
